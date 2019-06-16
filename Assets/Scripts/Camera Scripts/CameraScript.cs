@@ -1,0 +1,47 @@
+﻿using UnityEngine;
+using System.Collections;
+using System;
+
+public class CameraScript : MonoBehaviour
+{
+
+    private float speed = 1f;
+    private float acceleration = 0.2f;
+    private float maxspeed = 3.2f;
+
+    [HideInInspector]
+    public bool moveCamera;
+
+
+
+
+
+    // Use this for initialization
+    void Start()
+    {
+        moveCamera = true;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (moveCamera)
+        {
+            MoveCamera();
+        }
+    }
+
+    private void MoveCamera()
+    {
+        Vector3 temp = transform.position;
+        float oldY = temp.y;
+        float newY = temp.y - (speed * Time.deltaTime);
+        temp.y = Mathf.Clamp(temp.y, oldY, newY);
+        transform.position = temp;
+        speed += acceleration * Time.deltaTime;
+
+        if (speed > maxspeed)
+            speed = maxspeed;
+
+    }
+}
