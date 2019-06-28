@@ -12,10 +12,6 @@ public class CameraScript : MonoBehaviour
     [HideInInspector]
     public bool moveCamera;
 
-
-
-
-
     // Use this for initialization
     void Start()
     {

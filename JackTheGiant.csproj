@@ -64,7 +64,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Background\BGScaler.cs" />
+    <Compile Include="Assets\Scripts\Background\Collectors\BGCollector.cs" />
+    <Compile Include="Assets\Scripts\Background\Collectors\BGSpawner.cs" />
+    <Compile Include="Assets\Scripts\Camera Scripts\CameraScript.cs" />
+    <Compile Include="Assets\Scripts\Cloud Collectors\CloudCollector.cs" />
+    <Compile Include="Assets\Scripts\Cloud Collectors\CloudSpawner.cs" />
     <Compile Include="Assets\Scripts\Player\Player.cs" />
+    <Compile Include="Assets\Scripts\Player\PlayerBounds.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Font\readme.txt" />

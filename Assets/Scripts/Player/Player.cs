@@ -20,7 +20,6 @@ public class Player : MonoBehaviour
     {
         float forceX = 0f;
         float vel = Mathf.Abs(myBody.velocity.x);
-
         float h = Input.GetAxisRaw("Horizontal");
 
         if (h > 0)
